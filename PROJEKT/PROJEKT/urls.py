@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from APP.views import index, book_by_id
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('book/<int:book_id>', views.book_by_id, name='book_by_id'),
+    path('', index, name='index'),
+    path('book/<int:book_id>', book_by_id)
 ]
